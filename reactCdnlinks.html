@@ -1,0 +1,35 @@
+<!-- converting a simple html file to react application using
+CDN react links which are available in CDN react website and build
+a simple helloworld programme using react -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css"/>
+</head>
+
+<body>
+    <div>iam On Top of the root</div>
+    <div id="root">
+        <!-- if we have any existing physical elements here in this root tag, it'll get replaced by the root.render(parent3) from App.js 
+         it won't appended, React will take control of this root div and renders -->
+    </div>
+    <div>iam below of the root</div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- the below script tag is removed and kept in App.JS file to better rendering -->
+    <!-- <script>
+        // as we do in Javascript here in react also we have to create a heading tag using
+        //  React API
+        const heading = React.createElement("h1",{},"hello World from react")
+        // this root is a place where all the react code will run
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(heading)
+    </script> -->
+    <script src="./App.js"></script>
+</body>
+
+</html>
