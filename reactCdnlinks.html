@@ -18,8 +18,10 @@ a simple helloworld programme using react -->
          it won't appended, React will take control of this root div and renders -->
     </div>
     <div>iam below of the root</div>
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- since we installed react using npm install react command we don't need these CDN links 
+     and this is not an efficient way to create a react app -->
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
     <!-- the below script tag is removed and kept in App.JS file to better rendering -->
     <!-- <script>
         // as we do in Javascript here in react also we have to create a heading tag using
@@ -29,7 +31,9 @@ a simple helloworld programme using react -->
         const root = ReactDOM.createRoot(document.getElementById("root"))
         root.render(heading)
     </script> -->
-    <script src="./App.js"></script>
+    <!-- here if we don't use module type, normal JS files won't have import statements so these app will throw an error
+      "Browser scripts cannot have imports or exports." once you add type= "Module" this issue will resolve -->
+    <script type="module" src="./App.js"></script>
 </body>
 
 </html>
